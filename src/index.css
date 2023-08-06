@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+}
+
+@layer components {
+	.primary-btn-text {
+		@apply font-sans py-2 border-2 px-10 font-medium border-neutral-900 shadow-sm rounded-sm;
+	}
+	.primary-btn-text:hover {
+		@apply bg-neutral-900 text-neutral-50 transition-colors ease-out duration-75 cursor-pointer;
+	}
+	.product-tab {
+		@apply !w-fit font-bold pb-2;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0px;
+	/* Adjust the width as needed */
+}

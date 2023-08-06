@@ -1,0 +1,32 @@
+regular redux steps
+
+1. create the reducer
+sebuah function untuk inisiasi state dan action type
+
+misal
+
+const exampleReducer = (state = {
+    definisikan state disini sama kaya di usestate
+}, action) => {
+    gunakan penkondisian bisa if else bisa switch case
+
+    switch (action.type nya apa?) {
+        case "TYP_ACTIONNYA_APA" :
+            return {
+                ...state suapa state tidak hilang,
+                contoh_state : [...state.contoh_state, action.payload sebagai datanya]
+            }
+    }
+}
+
+
+2. create the store
+
+const store = createStore(masukan_nama_reducer)
+
+3. creta the dispatch
+const aksi = {type : "TYPE_ACTIONNYA_APA", payload : {masukan payloadnya naon}}
+store.dispatch(aksi)
+
+4. watch with subs
+store.subsribe()
